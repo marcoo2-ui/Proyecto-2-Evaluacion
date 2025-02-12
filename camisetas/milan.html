@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOOTBALL VINTAGE - Camisetas Retro</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>FOOTBALL VINTAGE</h1>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="/sobre-nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="/contacto.html">Contacto</a></li>
+                    <li><a href="/opiniones.html">Opiniones</a></li>
+                </ul>
+                <div class="nav-back">
+                    <button class="btn" onclick="window.history.back();">Volver</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="detalle-camiseta">
+        <div class="detalle-camiseta-container">
+            <div class="detalle-imagen">
+                <img src="/Img/mil.jpeg" alt="Milan 1990" id="camiseta-img">
+            </div>
+            <div class="detalle-info-container">
+                <div class="detalle-info">
+                    <h2 id="camiseta-nombre">Milan 1990</h2>
+                    <p><strong>Precio:</strong> <span id="camiseta-precio">79.99€</span></p>
+                    <p><strong>Material:</strong> 100% Poliéster</p>
+                    <p><strong>Edición:</strong> Retro Clásica</p>
+                    <label for="talla">Selecciona tu talla:</label>
+                    <select id="talla" name="talla">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <option value="XXL">XXL</option>
+                    </select>
+                </div>
+                <div class="detalle-boton">
+                    <button class="btn-compra" onclick="comprar()">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 FOOTBALL VINTAGE. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function comprar() {
+            const talla = document.getElementById('talla').value;
+            if (talla) {
+                window.open(`/comprar.html?talla=${talla}`, '_blank');
+            } else {
+                alert('Por favor, selecciona una talla.');
+            }
+        }
+    </script>
+</body>
+</html>
+
